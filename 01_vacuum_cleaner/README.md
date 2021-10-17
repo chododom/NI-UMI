@@ -45,7 +45,7 @@ Dále bylo implementováno vylepšení, které smetí hledá postupně ve vlnác
 
 Experimentálně bylo ověřeno, že přestože obě řešení poskytují stejnou vzdálenost, tak je druhý zmínený přístup podstatně rychlejší. Toto lze pozorovat v následující tabulce testovacích dat:
 
-| Vstupní soubor | Algoritmus (funkce) | Velikost pole | Počet smetí | Nejkratší nalezená cesta   | CPU čas |
+| Vstupní soubor | Algoritmus (funkce) | Velikost pole | Počet smetí | Nejkratší nalezená cesta   | CPU čas (s) |
 |-------|----------|-------------|----------------|-------------|----------------|
 | input1.txt | *naive_cleaner* | 3x5 | 4 | 15  | 0.018980979919433594 |
 | input1.txt | *fast_cleaner*  | 3x5 | 4 | 15  | 0.008963584899902344 |
@@ -53,9 +53,7 @@ Experimentálně bylo ověřeno, že přestože obě řešení poskytují stejno
 | input2.txt | *fast_cleaner*  | 5x6 | 3 | 17  | 0.01598501205444336 |
 | input3.txt | *naive_cleaner* | 5x13 | 8 | 42  | 4.504834890365601 |
 | input3.txt | *fast_cleaner*  | 5x13 | 8 | 42  | 0.04303121566772461 | 
-| input4.txt | *naive_cleaner* | 18x23 | 23 | 171 | 0.04303121566772461 |
-| input4.txt | *fast_cleaner*  | 18x23 | 23 | 171 | Přerušeno po 10 minutách |
+| input4.txt | *naive_cleaner* | 8x10 | 7 | 49 | 2.7977044582366943 |
+| input4.txt | *fast_cleaner*  | 8x10 | 7 | 49 | 0.06994462013244629 |
 
-*Příklad nalezené sekvence stavů pro soubor input3.txt:*
-
-
+*Příklady nalezených sekvencí stavů lze vidět v souborech output{}.txt*.
