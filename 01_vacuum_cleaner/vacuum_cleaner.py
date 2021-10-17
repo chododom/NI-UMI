@@ -5,6 +5,10 @@ Created on Tue Oct  5 18:21:42 2021
 @author: Dominik Chodounský
 """
 
+import numpy as np
+import time
+from collections import deque
+
 '''
 
 Grid key:
@@ -16,17 +20,15 @@ Grid key:
 
 '''
 
-import numpy as np
-import time
-from collections import deque
 
-
-def print_grid(grid):    
+def print_grid(grid): 
+    """ Prints the grid in which the robot moves """
     print()
     for line in np.array(grid):
         print(line)
 
 def generate_solutions(grid):
+    """ Generates all possible finishing states """
     grid = np.array(grid)
     arr = grid.flatten()
     waste_cnt = np.count_nonzero(arr.flatten() == 2)
@@ -51,6 +53,7 @@ def generate_solutions(grid):
     
 
 def generate_neighbours(grid):
+    """ Generates neighbouring states based on all available actions for current state """
     neighbours = []
     arr = np.array(grid)
     height = arr.shape[0]
@@ -169,7 +172,11 @@ def generate_neighbours(grid):
     return neighbours
 
 
-def BFS_shortest(start, waste_cnt):
+def BFS_fast(start, waste_cnt):
+    """ 
+    Uses BFS from start point to first piece of waste and then from that piece to the next
+    and so on in an attempt to find the shortest path that covers all of them
+    """
     # overall action plan
     complete_path = []
     
@@ -209,6 +216,7 @@ def BFS_shortest(start, waste_cnt):
 
 
 def BFS(start, end):
+    """ Uses BFS to find shortest path between two states """
     q = deque()
     visited = {tuple()}
     path = []
@@ -230,7 +238,12 @@ def BFS(start, end):
                 new_path.append(n)
                 q.append(new_path)
                 
+                
 def naive_cleaner(grid):
+    """ 
+    Control function for the slower cleaner that uses BFS to determine which of
+    the generted solutions is the closest to the starting state 
+    """
     solutions = generate_solutions(grid)
     
     # search from all solutions towards start
@@ -253,8 +266,12 @@ def naive_cleaner(grid):
     print('\nAction plan with cost: ' + str(len(best_path) - 1))
     
     
-def fast_cleaner(grid, waste_cnt):   
-    plan = BFS_shortest(grid, waste_cnt)
+def fast_cleaner(grid, waste_cnt):  
+    """ 
+    Control function for the faster cleaner that uses BFS_fast to attempt to find
+    the shortest path between all pieces of waste gradually
+    """
+    plan = BFS_fast(grid, waste_cnt)
     
     for i in range(len(plan)):
         if i == 0:
