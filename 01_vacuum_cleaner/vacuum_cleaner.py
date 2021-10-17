@@ -17,6 +17,7 @@ Grid key:
 '''
 
 import numpy as np
+import time
 from collections import deque
 
 
@@ -252,7 +253,7 @@ def naive_cleaner(grid):
     print('\nAction plan with cost: ' + str(len(best_path) - 1))
     
     
-def shortest_cleaner(grid, waste_cnt):   
+def fast_cleaner(grid, waste_cnt):   
     plan = BFS_shortest(grid, waste_cnt)
     
     for i in range(len(plan)):
@@ -264,7 +265,7 @@ def shortest_cleaner(grid, waste_cnt):
         
     print('\nAction plan with cost: ' + str(len(plan) - 1))
     
-def read_input(filename='./input2.txt'):
+def read_input(filename='./input3.txt'):
     waste_cnt = -1
     arr = []
     with open(filename) as file:
@@ -279,7 +280,9 @@ def read_input(filename='./input2.txt'):
     return np.array(arr), waste_cnt
 
 if __name__ == "__main__":
-    grid, waste_cnt = read_input('./input2.txt')
+    grid, waste_cnt = read_input('./input3.txt')
     
+    start = time.time()
     #naive_cleaner(grid)
-    shortest_cleaner(grid, waste_cnt)
+    fast_cleaner(grid, waste_cnt)
+    print('Time: ' + str(time.time() - start))
