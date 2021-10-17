@@ -56,4 +56,6 @@ Experimentálně bylo ověřeno, že přestože obě řešení poskytují stejno
 | input4.txt | *naive_cleaner* | 8x10 | 7 | 49 | 2.7977044582366943 |
 | input4.txt | *fast_cleaner*  | 8x10 | 7 | 49 | 0.06994462013244629 |
 
+Ačkoliv v provedených experimentech obě metody nalezly nejkratší cestu, domnívám se, že existují případy, kdy by rychlejší metoda selhala, jelikož funguje greedy principem a nebere v potaz umístění vzdálenějších kusů smetí. Proto pokud bychom si skutečně chtěl být jistí nejkratší vzdáleností, použil bych funkci *naive_cleaner*.
+
 *Příklady nalezených sekvencí stavů lze vidět v souborech output{}.txt*.
