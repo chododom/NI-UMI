@@ -6,7 +6,7 @@ například www.fit.cvut.cz a www.mit.edu. Navrhněte algoritmus, který nalezne
 internetové odkazy z jednoho vstupního webu na druhý.
 
 ## Řešení
-V rámci řešení jsem použil přístup prohledávání do šířky, kde si držím frontu nalezených webových URL adres a postupně na ně posílám požadavky, které zpracuji a získám z nich odkazy další úrovně.
+V rámci řešení jsem použil přístup prohledávání do šířky, kde si držím frontu nalezených webových URL adres a postupně na ně posílám požadavky, které zpracuji a získám z nich odkazy další úrovně s pomocí knihovny BeautifulSoup.
 Jelikož jsem při experimentaci zaznamenal, že hledání často uvízne na jistých doménách, které pravděpodobně nepovedou k dobrému výsledku, tak jsem tyto domény vyfiltroval. Jedná se konkrétně o: *google.com, facebook.com, twitter.com a youtube.com*.
 
 Pro demonstraci jsem použil zmíněný příklad cesty z domény *fit.cvut.cz* na *mit.edu* a pro tento vstup byl výstup mého programu následující:
