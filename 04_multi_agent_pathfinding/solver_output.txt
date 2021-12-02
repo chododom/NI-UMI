@@ -1,0 +1,31 @@
+ --- OK.
+ Match tree built with 228 nodes.
+
+PDDL problem description loaded: 
+	Domain: MAPF
+	Problem: MAPF_INSTANCE
+	#Actions: 228
+	#Fluents: 126
+Landmarks found: 6
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 44
+#RP_fluents 62
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{6/6/0}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19][20][21][22][23][24][25][26][27][28][29][30]rel_plan size: 23
+#RP_fluents 34
+{6/5/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16][17][18][19]rel_plan size: 12
+#RP_fluents 20
+{6/4/2}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15]rel_plan size: 9
+#RP_fluents 14
+{6/3/3}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 5
+#RP_fluents 10
+{6/2/4}:IW(1) -> [2][3]rel_plan size: 3
+#RP_fluents 6
+{6/1/5}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 72
+Total time: 0.084
+Nodes generated during search: 4368
+Nodes expanded during search: 4189
+IW search completed
