@@ -26,6 +26,9 @@ Pro formulaci problému je třeba vytvořit dva soubory:
     * cílem je umístit čtverečky tak, aby ten s číslem 1 byl na první pozici, 2 na druhé, atd... a poslední pozice byla prázdná
 
 
+![alt text](./8_puzzle.JPG?raw=true "Title")
+
+
 Pro řešení úlohy byl použit online [automatický plánovač](http://editor.planning.domains/), který si problém reprezentuje jako stavový prostor, který řeší pomocí BFS.
 Plánovač vygeneroval 181 stavů, z nichž 45 expandoval.
 Plán nalezený plánovačem měl cenu 20, detailnější výstup je [zde](./solver_output.txt).
