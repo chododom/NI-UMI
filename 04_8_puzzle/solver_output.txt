@@ -1,0 +1,52 @@
+ --- OK.
+ Match tree built with 288 nodes.
+
+PDDL problem description loaded: 
+	Domain: LISAK
+	Problem: LISAK_INSTANCE
+	#Actions: 288
+	#Fluents: 81
+Landmarks found: 9
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 15
+#RP_fluents 23
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{9/9/0}:IW(1) -> rel_plan size: 15
+#RP_fluents 23
+{9/7/2}:IW(1) -> [2]rel_plan size: 14
+#RP_fluents 21
+{9/6/3}:IW(1) -> [2][3]rel_plan size: 11
+#RP_fluents 18
+{9/5/4}:IW(1) -> [2][3][4][5][6][7][8][9][10][11]rel_plan size: 7
+#RP_fluents 11
+{9/4/5}:IW(1) -> [2][3][4][5][6]rel_plan size: 4
+#RP_fluents 6
+{9/3/6}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13];; NOT I-REACHABLE ;;
+Total time: 0.004
+Nodes generated during search: 940
+Nodes expanded during search: 786
+IW search completed
+Starting search with BFS(novel,land,h_add)...
+--[4294967295 / 23]--
+--[3 / 23]--
+--[3 / 22]--
+--[3 / 20]--
+--[3 / 17]--
+--[3 / 16]--
+--[3 / 13]--
+--[3 / 12]--
+--[3 / 10]--
+--[3 / 7]--
+--[3 / 6]--
+--[2 / 6]--
+--[2 / 5]--
+--[2 / 2]--
+--[2 / 0]--
+--[0 / 0]--
+Total time: 0.004
+Nodes generated during search: 181
+Nodes expanded during search: 45
+Plan found with cost: 20
+BFS search completed
