@@ -28,7 +28,7 @@ Pro formulaci problému je třeba vytvořit dva soubory:
     * cílový stav je definovaný umístěním každého agenta na svém cílovém vrcholu
 
 
-![alt text](./MAPF.JPG?raw=true "MAPF")
+![alt text](./mapf.JPG?raw=true "MAPF")
 
 
 Pro řešení úlohy byl použit online [automatický plánovač](http://editor.planning.domains/), který si problém reprezentuje jako stavový prostor, který řeší pomocí Iterative Width algoritmu.
