@@ -8,7 +8,7 @@ Pokuste se zformulovat úlohu Lišáka jako plánovací problém v jazyce PDDL a
 ## Řešení
 
 Pro formulaci problému je třeba vytvořit dva soubory:
-* [**domain_def.pddl**](/domain_def.pddl)
+* [**domain_def.pddl**](./domain_def.pddl)
     * tento soubor obsahuje definici domény problému, tedy jaké existují predikáty a akce, které mohou měnit stav
     * predikáty: 
         * (square ?sqr) - objekt sqr je čtvereček, kterým lze hýbat po hracím poli
@@ -18,7 +18,7 @@ Pro formulaci problému je třeba vytvořit dva soubory:
     * akce:
         * move_x - pohyb po x-ové ose za předpokladu, že cílová souřadnice je platná a prázdná
         * move_y - pohyb po y-ové ose za předpokladu, že cílová souřadnice je platná a prázdná
-* [**problem_def.pddl**](/problem_def.pddl)
+* [**problem_def.pddl**](./problem_def.pddl)
     * tento soubor obsahuje formulaci konkrétního problému, který lze vidět na obrázku ze cvičení
     * je zadefinováno 8 čtverců
     * každému čtverec je umístěn na konkrétní souřadnice
@@ -28,7 +28,7 @@ Pro formulaci problému je třeba vytvořit dva soubory:
 
 Pro řešení úlohy byl použit online [automatický plánovač](http://editor.planning.domains/), který si problém reprezentuje jako stavový prostor, který řeší pomocí BFS.
 Plánovač vygeneroval 181 stavů, z nichž 45 expandoval.
-Plán nalezený plánovačem měl cenu 20, detailnější výstup je [zde](/solver_output.txt).
+Plán nalezený plánovačem měl cenu 20, detailnější výstup je [zde](./solver_output.txt).
 
 **Nalezený plán je následující:**
 
