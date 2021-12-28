@@ -1,0 +1,21 @@
+int: queens; % number of queens to be placed onto a queens x queens board 
+array [1..queens] of var 1..queens: 
+board; % i-th column's queen placed in board[i] row
+ 
+include "alldifferent.mzn";
+ 
+constraint alldifferent(board);
+constraint alldifferent([ board[i] + i | i in 1..queens]); 
+constraint alldifferent([ board[i] - i | i in 1..queens]);
+
+solve :: int_search(board, first_fail, indomain_min)
+satisfy;
+
+output 
+[ if fix(board[j]) == i 
+	then "Q" else "-" endif ++
+  if j == queens 
+	then "\n" 
+  else "" 
+  endif | i,j in 1..queens
+]
