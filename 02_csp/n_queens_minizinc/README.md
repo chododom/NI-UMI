@@ -1,7 +1,7 @@
 # Problém N-královen v MiniZinc solveru (2. cvičení)
 
 Úkolem bylo napsat v MiniZinc IDE zadání pro řešení úlohy N-královen. 
-Skript přijímá libovolné N a tento počet královen rozmístí na šachovnici o rozměrech NxN tak, že se královny navzájem neohrožují.
+Skript přijímá libovolné N a tento počet královen rozmístí na šachovnici o rozměrech NxN tak, že se královny navzájem neohrožují, což dosahuje pomocí podmínky *allDifferent*.
 
 Skript předaný MiniZinc solveru lze vidět v textovém souboru *n_queens.txt*.
 
