@@ -1,0 +1,4 @@
+{'Hlavní město Praha': 'O', 'Jihočeský kraj': 'O', 'Jihomoravský kraj': 'R', 'Karlovarský kraj': 'O', 
+'Královehradecký kraj': 'O', 'Liberecký kraj': 'B', 'Moravskoslezský kraj': 'O', 'Olomoucký kraj': 'B', 
+'Pardubický kraj': 'G', 'Plzeňský kraj': 'B', 'Středočeský kraj': 'R', 'Ústecký kraj': 'G', 'Vysočina': 'B', 
+'Zlínský kraj': 'G'}
