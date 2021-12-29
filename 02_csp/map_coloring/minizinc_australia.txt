@@ -1,0 +1,41 @@
+% number of colors to use
+int: color_cnt = 3;
+
+% assign domains
+var 1..color_cnt: WA;   
+var 1..color_cnt: NT;  
+var 1..color_cnt: SA;   
+var 1..color_cnt: QU;
+var 1..color_cnt: NSW;  
+var 1..color_cnt: VI;   
+var 1..color_cnt: TA;
+
+% define constraints as neighbours
+constraint WA != NT;
+constraint WA != SA;
+constraint NT != SA;
+constraint NT != QU;
+constraint SA != QU;
+constraint SA != NSW;
+constraint SA != VI;
+constraint QU != NSW;
+constraint NSW != VI;
+solve satisfy;
+
+% display colors
+output ["wa=\(WA)\n nt=\(NT)\n sa=\(SA)\n q=\(QU)\n nsw=\(NSW)\n v=\(VI)\n t=\(TA)\n"];
+
+
+-------------------------------------------------------------------------------------------
+Output:
+
+Running untitled_model.mzn
+wa=3
+nt=2
+sa=1
+q=3
+nsw=2
+v=3
+t=1
+----------
+Finished in 596msec
