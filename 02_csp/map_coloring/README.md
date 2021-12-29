@@ -29,7 +29,7 @@ All nodes have been assigned a color!
 
 ## 3) MiniZinc
 
-Definice problému pro MiniZinc je v [tomto souboru](./minizinc_australia.txt).
+Definice problému pro MiniZinc je v [tomto souboru](./minizinc_australia.txt). Jednotlivé barvy jsou reprezentovány čísly 1, 2, 3.
 
 ### Output
 
